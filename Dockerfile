@@ -5,7 +5,7 @@ COPY . /gotty
 RUN apt-get update -qq && apt-get install -qq nodejs npm
 RUN CGO_ENABLED=0 make
 
-FROM debian:latest
+FROM debian:10
 
 ENV TERM=linux
 RUN apt-get update -qq && \
